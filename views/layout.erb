@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Jacob Baum</title>
+<link type="text/css" rel="stylesheet" href="css/styles.css">
+<link href='http://fonts.googleapis.com/css?family=Merriweather|Open+Sans:400,600' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/jquery-ui.structure.css" />
+<link rel="stylesheet" href="css/jquery-ui.theme.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+</head>
+
+<body>
+<header>
+<ul>
+  <li><a href="contact"><img src="icons/mail.png" /></a></li>
+  <li id="mailOpener">
+    <img src="icons/mail.png" />
+    <div id="mailDialog">
+      <p>Feedback is welcome. Questions are, too.</p>
+      <p>jacobbaum@gmail.com</p>
+    </div>  
+  </li>
+  <li id="infoOpener">
+    <img src="icons/info2.png" />
+    <div id="infoDialog">
+      <p>This site was created as part of an extended application for General Assembly's Web Development Immersive program.</p> 
+      <p>It is not finished, but it is functional.</p>
+    </div>
+  </li>
+  <li id="menuOpener">
+    <img src="icons/menu.png" />
+    <div id="menuDialog">
+      <ul>
+        <li>This Page</li>
+        <ul>
+          <li><a href="#intro">Top</a></li>
+          <li><a href="#sound">Sounds</a></li>
+          <li><a href="#library">Libraries</a></li>
+          <li><a href="#kids">Kids</a></li>
+          <li><a href="#other">More</a></li>
+        </ul>
+        <li>Web Audio</li>  
+        <ul>
+          <li><a href="#">Beat Frequency</a></li>
+      </ul>
+    </div>  
+  </li>
+</ul>
+</header>   
+
+<%= yield %>
+
+</body>
+</html>

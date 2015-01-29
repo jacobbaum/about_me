@@ -1,0 +1,139 @@
+
+<div class="main" id="intro">
+<h1>Jacob Baum</h1>
+<p>About me. About why I'm excited.</p>
+
+<ul>
+  <a href="#sound" title="Sounds"><li><img src="icons/sound.png" /></li></a>
+  <a href="#library" title="Libraries"><li><img src="icons/librarian.png" /> </li></a>
+  <a href="#kids" title="Kids!"><li><img src="icons/kids.png" /> </li></a>
+  <!-- <a href="#other" title="Not to mention..."><li><img src="icons/ampersand.png" /> </li></a> -->
+</ul>
+</div>  
+
+<div class="main" id="sound">
+<h2>Sounds</h2>
+<div id="soundDiv">
+
+<p>I have a long-standing fascination with sound: It's texture and it's shape, how it interacts with the environment, and how it interacts with itself.</p>  
+
+<p>While making this site, I spent some time exploring the <a href="http://webaudio.github.io/web-audio-api/">Web Audio API</a> and created a simple tool for generating audible beats. I wanted to link to it but, well, it's not quite ready.</p>
+
+<p>The Web Audio API is <span class="em">very</span> exciting.</p>
+
+<p>Creating and manipulating audio and audio data in a web browser? Exciting. Creating the tools to do it? Very exciting.</p>
+
+<p>Tools for real time collaboration? Tools for making personalized instruments and effects? Generative music based on Twitter feeds? I might find a way to incorporate this into a project.</p>
+</div>
+
+</div>
+
+<div class="main" id="library">
+<h2>Libraries</h2>
+  <div id="libDiv">
+    <p>Once, I was a librarian.</p> 
+
+    <p>I have a degree in library science and I spent a few years manning the reference desk at a public library. I haven't thought about going back for a long time.  Now, though, I'm not ruling it out.</p>
+
+    <p>Some of the most impressive, interesting and useful work happening in libraries really happening online. To have the technical ability parse vast amounts of information, to connect disparate forms and formats, to make something useful: It would definitely be worth while.</p>
+  </div>
+</div>
+
+<div class="main" id="kids">
+  
+    <h2>Kids</h2>
+  
+  <div id="kidContent">
+    <img src="photos/kids1.jpg" alt="Niece and Nephews">
+    <div id="kidCaption">
+      <p>Yes, they are cute.  My niece and nephews, from left to right: Jasper, Asa, Carys, and Shepard.  I gladly spend a lot of time with them.</p>
+
+      <p>I'm eager to turn them into my own private focus group. What could I make specifically for them? What would educate or entertain? What kind of UI would a four-year-old possibly respond to? Really, though, what are the information needs of an eight-year-old?   
+      </p>
+
+      <p>One simple idea, that could make for a good exercise: Create an interface that makes it easy for them to find videos.</p> 
+
+      <p>Watching YouTube videos on Mom and Dad's iPad is, from what I've seen, the only way that they make use of the internet. What if they could 'click' on a large Barbie button to perform a pre-programmed search for Barbie? I might be on to something.</p>
+    </div>  
+  </div>
+
+
+</div>  
+
+<!--<div class="main" id="other">
+<h2>And such</h2>
+</div> -->
+
+<script>
+
+$( "#mailDialog" ).dialog({ autoOpen: false, width: 200, closeText: "", 
+  position: { my: "right top", at: "center bottom", of:"#mailOpener" }
+ });
+
+$( "#mailOpener" ).click(function() {
+  $( "#mailDialog" ).dialog( "open" );
+});
+
+$( "#infoDialog" ).dialog({ autoOpen: false, width: 300, closeText: "",
+  position: { my: "right top", at: "center bottom", of:"#infoOpener" }
+ });
+
+$( "#infoOpener" ).click(function() {
+  $( "#infoDialog" ).dialog( "open" );
+});
+
+$( "#menuDialog" ).dialog({ autoOpen: false, width: 140, closeText: "", dialogClass: "dialogMenu", position: { my: "right top", at: "center bottom", of:"#menuOpener" }
+ });
+
+$( "#menuOpener" ).click(function() {
+  $( "#menuDialog" ).dialog( "open" );
+});
+
+$( "#dialog" ).dialog({ autoOpen: false, width: 200, closeText: ""
+ });
+
+$( "#opener" ).click(function() {
+  $( "#dialog" ).dialog( "open" );
+});
+
+$("#intro li").hover(
+  function() {$(this).animate({opacity: 0.3}, 500, function() {
+    //animated
+  });
+  },
+  function() {$(this).animate({opacity: 1}, 1000, function() {
+    //animated
+  });
+  }
+);
+
+$(".ui-icon-closethick").hover(
+  function() {$(this).animate({opacity: 1}, 200, function() {
+    //animated
+  });
+  },
+  function() {$(this).animate({opacity: .7}, 200, function() {
+    //animated
+  });
+  }
+);
+
+$('a').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+    return false;
+});
+
+$( document ).tooltip();
+
+var introTip = $("#intro a").tooltip({
+  position: {
+    my: "center bottom",
+    at: "center top+50",
+    collision: "none",
+  },
+  hide: false
+});
+
+</script>

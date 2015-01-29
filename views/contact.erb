@@ -1,0 +1,79 @@
+<div class="main" id="">
+<h2>Click on the envelope above.</h2>
+</div>
+
+
+
+<script>
+
+$( "#mailDialog" ).dialog({ autoOpen: false, width: 200, closeText: "", 
+  position: { my: "right top", at: "center bottom", of:"#mailOpener" }
+ });
+
+$( "#mailOpener" ).click(function() {
+  $( "#mailDialog" ).dialog( "open" );
+});
+
+$( "#infoDialog" ).dialog({ autoOpen: false, width: 300, closeText: "",
+  position: { my: "right top", at: "center bottom", of:"#infoOpener" }
+ });
+
+$( "#infoOpener" ).click(function() {
+  $( "#infoDialog" ).dialog( "open" );
+});
+
+$( "#menuDialog" ).dialog({ autoOpen: false, width: 140, closeText: "", dialogClass: "dialogMenu", position: { my: "right top", at: "center bottom", of:"#menuOpener" }
+ });
+
+$( "#menuOpener" ).click(function() {
+  $( "#menuDialog" ).dialog( "open" );
+});
+
+$( "#dialog" ).dialog({ autoOpen: false, width: 200, closeText: ""
+ });
+
+$( "#opener" ).click(function() {
+  $( "#dialog" ).dialog( "open" );
+});
+
+$("#intro li").hover(
+  function() {$(this).animate({opacity: 0.3}, 500, function() {
+    //animated
+  });
+  },
+  function() {$(this).animate({opacity: 1}, 1000, function() {
+    //animated
+  });
+  }
+);
+
+$(".ui-icon-closethick").hover(
+  function() {$(this).animate({opacity: 1}, 200, function() {
+    //animated
+  });
+  },
+  function() {$(this).animate({opacity: .7}, 200, function() {
+    //animated
+  });
+  }
+);
+
+$('a').click(function(){
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+    return false;
+});
+
+$( document ).tooltip();
+
+var introTip = $("#intro a").tooltip({
+  position: {
+    my: "center bottom",
+    at: "center top+50",
+    collision: "none",
+  },
+  hide: false
+});
+
+</script>
